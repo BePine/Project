@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { getPosts } from "../../lib/posts";
-const arr = [
-    {class:"postTitle", content:"data.title"},
-    {class:"postContent", content:"data.content"},
-    {class:"postAuthor", content:"data.author"},
 
-
-]
 
 const Post = (props?:any) => {
 
@@ -21,10 +15,15 @@ const Post = (props?:any) => {
     // console.log(posts)
     const location = useLocation()
     const data:any = location.state
+    
     console.log(data)
     return(
         <div className="postSite">
-            {/* {arr.map(({class, content}) => <div className={class?}>{content}</div>)} */}
+            <div className="postTitle">{data.title}</div>
+            <div className="postContent">{data.content}</div>
+            <div className="postAuthor">{data.author}</div>
+
+            
 
         </div>
     )

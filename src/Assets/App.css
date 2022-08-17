@@ -283,6 +283,25 @@ body {
 	height:100px;
 	color:black;
 }
+.postSite .postTitle{
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+	text-align:center;
+	width:100%;
+}
+.postSite .postContent{
+	margin-top:2%;
+	width:100%;
+	text-align:center;
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+	height:100px;
+}
+.postSite .postAuthor{
+	margin-top:2%;
+	width:100%;
+	text-align:center;
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+	height:100px;
+}
 /* --FOOTER CSS-- */
 .footer {
 	background: #121212;
