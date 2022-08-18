@@ -2,6 +2,7 @@ import React, { Component, useEffect, useState } from 'react';
 import './Assets/App.css';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+import JumpArrow from './Components/JumpArrow';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { getArticles } from './lib/blog';
 import ReactDOM from 'react-dom/client';
@@ -20,9 +21,9 @@ function App() {
 	return (
 		<ParallaxProvider>			
 			<div className='App'>
-				<Header />
-				
+				<Header />	
 				<Outlet context={{article}}/>
+				<JumpArrow/>
 				<Footer />
 			</div>
 		</ParallaxProvider>
