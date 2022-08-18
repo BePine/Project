@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Error404 from './Pages/Error404';
 import Main from './Pages/Home/Main';
-import Banner from './Pages/Home/Banner';
 import Forum from './Pages/Forum/Forum';
 import Post from './Pages/Forum/Post';
 
@@ -18,7 +17,7 @@ root.render(
     <BrowserRouter>
 				<Routes>
           <Route path='/' element={<App/>}>
-            <Route path='/' element={<><Banner /><Main /></>}></Route>
+            <Route path='/' element={<><Main /></>}></Route>
             <Route path='forum' element={<Forum/>}></Route>
             <Route path='forum/posts/*' element={<Post/>}></Route>
             <Route path='contact' element={<p>contact</p>}></Route>

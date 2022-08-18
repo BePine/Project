@@ -2,7 +2,6 @@ import React, { Component, useEffect, useState } from 'react';
 import './Assets/App.css';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import Banner from './Pages/Home/Banner';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { getArticles } from './lib/blog';
 import ReactDOM from 'react-dom/client';

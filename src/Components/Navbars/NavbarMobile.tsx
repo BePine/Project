@@ -29,7 +29,7 @@ const NavbarMobile = () => {
 					/>
 				</button>
 			</ul>
-			<ul className='mobileNavbarBottom' style={navShow? {display:"block"}:{display:"none"}}>
+			<ul className='mobileNavbarBottom' style={navShow? {transform:"translateY(0%)"}:{ transform:"translateY(-100%)"}}>
                 {linksArr.map(({label, link}) => <li key={label}><Link to={link}>{label}</Link></li>)}
 				
 			</ul>
