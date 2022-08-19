@@ -17,12 +17,10 @@ const JumpArrow = () => {
             
         }
     },[scrollY])
-    return(
-        <>
+    return(       
+            <button onClick={handleClick} ><img className="goUp" style={goUpStyle} src={require("../static/up-arrow.png")} alt="" /></button>
         
-            <button onClick={handleClick}><img className="goUp" style={goUpStyle} src={require("../static/up-arrow.png")} alt="" /></button>
-        
-        </>
+
     )
 }
 export default JumpArrow
