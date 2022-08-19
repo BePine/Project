@@ -11,7 +11,7 @@ const Cookies = () => {
     
         }
     },[])
-    const handleClickAccept = () => {
+    const handleClickConsent = () => {
         window.localStorage.setItem("veteranCookieStat", "true")
         setCookieShow({display: "none"})
     }
@@ -20,8 +20,9 @@ const Cookies = () => {
     }
 	return (
 		<div className='cookie' style={cookieShow}>
-			<div className='contentCookie'>i m cookie</div>
-            <button onClick={handleClickAccept}>accept</button><button onClick={handleClickDeny}>deny</button>
+            <h2>Notice</h2>
+			<div className='contentCookie'>We collect cookies to analyze our website traffic and performance; we never collect any personal data, disclaimer: this website doesn t actual collect any cookies.</div>
+            <button onClick={handleClickConsent}>Consent</button><button onClick={handleClickDeny}>Deny</button>
 		</div>
 	);
 };

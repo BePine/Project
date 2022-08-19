@@ -17,6 +17,7 @@ export const db = getFirestore()
 export const articlesColRef = collection(db, 'RecommendedArticles')
 export const newsColRef =  collection(db, "NewsletterUsers")
 export const postsColRef =  collection(db, "Posts")
+export const questColRef = collection(db, "Questions")
 
 
 //   getDocs(colRef)

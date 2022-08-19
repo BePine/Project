@@ -1,22 +1,28 @@
-import { useEffect, useState } from "react"
-import { Link } from "react-router-dom";
-import { getPosts } from "../../lib/posts"
-import Post from "./Post";
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { getPosts } from '../../lib/posts';
+import Post from './Post';
 
 const Forum = () => {
-    const [posts, setPosts] = useState<any>(null);
-    useEffect(()=>{
-        getPosts().then((data)=>{
-            setPosts(data)
-        })
-    },[])
+	const [posts, setPosts] = useState<any>(null);
+	useEffect(() => {
+		getPosts().then((data) => {
+			setPosts(data);
+		});
+	}, []);
 
-    return(
-        <div className="forum">
-            {posts?.map((pos:any)=> <Link to={'/forum/posts/'+pos.id} state={pos}>
-                <div className='posts'>{pos.title}</div>
-            </Link> )}
-        </div>
-    )
-}
-export default Forum
+	return (
+		<div className='forum'>
+            <div className="forumHeader"><h2>Forum</h2></div>
+			{posts?.map((pos: any) => (
+				<Link to={'/forum/posts/' + pos.id} state={pos}>
+					<div className='posts'>
+						<div className='posTitle'>{pos.title}</div>
+						<div className='posAuthor'>{pos.author}</div>
+					</div>
+				</Link>
+			))}
+		</div>
+	);
+};
+export default Forum;
