@@ -4,6 +4,7 @@ import { json } from 'stream/consumers';
 import Newsletter from './Newsletter';
 import { useArticle } from '../../App';
 import { Parallax } from 'react-scroll-parallax';
+import { Link } from 'react-router-dom';
 const Main = (props: any) => {
 	const { article } = useArticle();
 	return (
@@ -22,19 +23,22 @@ const Main = (props: any) => {
 						alt='couldn t load img'
 					/>
 				</div>
+				<h2 className="artMessage">Our articles:</h2>
 				<div className='articles'>
 					{article?.map((element: any) => (
-						<div className='elements'>
-							<div className='elementTitle'>
-								<h3>{element.title}</h3>
+						<Link className="elementsLink" to={"recArticles/" + element.id} state={element}>
+							<div className='elements'>
+								<div className='elementTitle'>
+									<h3>{element.title}</h3>
+								</div>
+								<div className='elementContent'>
+									<p>{element.content}</p>
+								</div>
+								<div className='elementAuthor'>
+									<h5>author: {element.author}</h5>
+								</div>
 							</div>
-							<div className='elementContent'>
-								<p>{element.content}</p>
-							</div>
-							<div className='elementAuthor'>
-								<h5>author: {element.author}</h5>
-							</div>
-						</div>
+						</Link>
 					))}
 				</div>
 				<Newsletter />

@@ -8,6 +8,7 @@ import Error404 from './Pages/Error404';
 import Main from './Pages/Home/Main';
 import Forum from './Pages/Forum/Forum';
 import Post from './Pages/Forum/Post';
+import RecArticles from './Pages/RecArticles/RecArticles';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,6 +21,7 @@ root.render(
             <Route path='/' element={<><Main /></>}></Route>
             <Route path='forum' element={<Forum/>}></Route>
             <Route path='forum/posts/*' element={<Post/>}></Route>
+            <Route path='recArticles/*' element={<RecArticles/>}></Route>
             <Route path='contact' element={<p>contact</p>}></Route>
             <Route path='about' element={<p>about</p>}></Route>
             <Route path='*' element={<Error404/>}></Route>

@@ -151,7 +151,14 @@ body {
 	width: 30px;
 	pointer-events: none;
 }
-
+/* --COOKIE ELEMENT CSS-- */
+.cookie{
+	z-index:9;
+	background:red;
+	height:100px;
+	width:100px;
+	position:fixed;
+}
 /* --MAIN ELEMENT CSS-- */
 svg {
 	margin-bottom: -10px;
@@ -182,7 +189,10 @@ svg {
 .main .imgContainer .veteran64 {
 	border-radius: 15px;
 }
-
+.artMessage{
+	text-align:center;
+	margin-top:5vh;
+}
 .main .articles {
 	display: flex;
 	min-height: 500px;
@@ -196,11 +206,15 @@ svg {
 		flex-direction: column;
 	}
 }
+.elementsLink{
+	color:white;
+	text-decoration:none;
+	flex: 3;
 
+}
 .main .articles .elements {
 	margin: 2px;
 	margin-top: 4%;
-	flex: 3;
 	min-height: 400px;
 	transition: 0.3s;
 	position: relative;

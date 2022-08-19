@@ -7,6 +7,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import { getArticles } from './lib/blog';
 import ReactDOM from 'react-dom/client';
 import { Outlet, useOutletContext, useLocation } from 'react-router-dom';
+import Cookies from './Components/Cookies';
 function App() {
 	const [article, setArticle] = useState<any>(null);
 	useEffect(() => {
@@ -21,7 +22,8 @@ function App() {
 	return (
 		<ParallaxProvider>			
 			<div className='App'>
-				<Header />	
+				<Header />
+				<Cookies/>	
 				<Outlet context={{article}}/>
 				<JumpArrow/>
 				<Footer />
