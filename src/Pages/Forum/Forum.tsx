@@ -13,10 +13,10 @@ const Forum = () => {
 
 	return (
 		<div className='forum'>
-            <div className="forumHeader"><h2>Forum</h2></div>
+            <div className="forumHeader margins"><h2>Forum</h2></div>
 			{posts?.map((pos: any) => (
 				<Link to={'/forum/posts/' + pos.id} state={pos}>
-					<div className='posts'>
+					<div className='posts margins'>
 						<div className='posTitle'>{pos.title}</div>
 						<div className='posAuthor'>{pos.author}</div>
 					</div>

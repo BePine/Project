@@ -16,7 +16,7 @@ const Main = (props: any) => {
 				></path>
 			</svg>
 			<div className='main'>
-				<div className='imgContainer'>
+				<div className='imgContainer margins'>
 					<img
 						className='veteran64'
 						src={require('../../static/veteran64.png')}

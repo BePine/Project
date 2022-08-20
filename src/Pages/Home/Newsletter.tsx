@@ -22,11 +22,11 @@ const Newsletter = () => {
     }
     return(
         <>
-            <div className="newsletter">
+            <div className="newsletter margins">
                 <h3>Sign up for our newsletter</h3>
                 <form onSubmit={(e)=>handleSubmit(e)}>
-                    Name: <input type="text" onChange={handleInputChange} name={newsName} value={newsName} placeholder="Name" required/>
-                    Email: <input type="email" onChange={handleInputChange} name={newsEmail} value={newsEmail} placeholder="Email" required/>
+                    <input type="text" onChange={handleInputChange} name={newsName} value={newsName} placeholder="enter name" required/>
+                    <input type="email" onChange={handleInputChange} name={newsEmail} value={newsEmail} placeholder="enter email" required/>
                     <button type="submit">Subscribe</button>
                 </form>
             </div>

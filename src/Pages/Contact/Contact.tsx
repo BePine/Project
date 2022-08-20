@@ -42,21 +42,21 @@ const Contact = () => {
 					d='M0,32L1440,256L1440,320L0,320Z'
 				></path>
 			</svg>
-			<div className='contactSite'>
+			<div className='sideSite'>
                 <h1>Contact info</h1>
-				<div className='imgContainer'>
+				<div className='imgContainer margins'>
 					<img
 						className='veteran64'
 						src={require('../../static/veteran64.png')}
 						alt='couldn t load img'
 					/>
 				</div>
-				<form className='contactContainer' onSubmit={handleSubmit}>
-                    <p>To contact us submit form and we will respond as fast as possible</p>
-					<input type='email' onChange={handleInputChange} name="emailH" value={contactEmail} placeholder='enter e-mail' required/>
-					<input type='text' onChange={handleInputChange} name="textH" value={contactName} placeholder='enter name' required/>
-					<textarea onChange={handleInputChange} name="textareaH" value={contactContent} cols={30} rows={10} placeholder="enter text to send" required></textarea>
-					<button type="submit">Submit</button>
+				<form className='sideContainer margins' onSubmit={handleSubmit}>
+                    <p className="margins">To contact us submit form and we will respond as fast as possible</p>
+					<input className="margins" type='email' onChange={handleInputChange} name="emailH" value={contactEmail} placeholder='enter e-mail' required/>
+					<input className="margins" type='text' onChange={handleInputChange} name="textH" value={contactName} placeholder='enter name' required/>
+					<textarea className="margins" onChange={handleInputChange} name="textareaH" value={contactContent} cols={30} rows={10} placeholder="enter text to send" required></textarea>
+					<button className="margins" type="submit">Submit</button>
 				</form>
 			</div>
 			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'>
