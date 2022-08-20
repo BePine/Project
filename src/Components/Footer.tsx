@@ -6,7 +6,7 @@ const Footer = () => {
 				src={require('../static/veteran64.png')}
 				alt='couldn t load img'
 			/>
-			<p className="margins">
+			<p className='margins'>
 				Github: https://github.com/BePine<br></br>
 			</p>
 		</div>

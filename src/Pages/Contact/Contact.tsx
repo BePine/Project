@@ -1,49 +1,41 @@
-import { addDoc } from "firebase/firestore";
-import { useState } from "react";
-import { questColRef } from "../../lib/firebase";
+import { addDoc } from 'firebase/firestore';
+import { useState } from 'react';
+import { questColRef } from '../../lib/firebase';
 
 const Contact = () => {
-    const [contactEmail, setContactEmail] = useState("")
-    const [contactName, setContactName] = useState("")
-    const [contactContent, setContactContent] = useState("")
+	const [contactEmail, setContactEmail] = useState('');
+	const [contactName, setContactName] = useState('');
+	const [contactContent, setContactContent] = useState('');
 
-    const handleInputChange = (e:any) => {
-        if(e.target.name==="textareaH"){
-            console.log(contactName)
-            setContactContent(e.target.value)
-        }
-        else if(e.target.name==="textH"){
-            console.log(contactName)
-            setContactName(e.target.value)
-        }
-        else if(e.target.name==="emailH"){
-            setContactEmail(e.target.value)
-
-        }
-    }
-    const handleSubmit = (e:any) => {
-        e.preventDefault()
-        const docRef = addDoc(questColRef, {
-            email: contactEmail,
-            name: contactName,
-            content: contactContent
-          });
-        setContactName("")
-        setContactEmail("")
-        setContactContent("")
-
-
-    }
+	const handleInputChange = (e: any) => {
+		if (e.target.name === 'textareaH') {
+			console.log(contactName);
+			setContactContent(e.target.value);
+		} else if (e.target.name === 'textH') {
+			console.log(contactName);
+			setContactName(e.target.value);
+		} else if (e.target.name === 'emailH') {
+			setContactEmail(e.target.value);
+		}
+	};
+	const handleSubmit = (e: any) => {
+		e.preventDefault();
+		const docRef = addDoc(questColRef, {
+			email: contactEmail,
+			name: contactName,
+			content: contactContent,
+		});
+		setContactName('');
+		setContactEmail('');
+		setContactContent('');
+	};
 	return (
 		<>
 			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'>
-				<path
-					fill='#f05454'
-					d='M0,32L1440,256L1440,320L0,320Z'
-				></path>
+				<path fill='#f05454' d='M0,32L1440,256L1440,320L0,320Z'></path>
 			</svg>
 			<div className='sideSite'>
-                <h1>Contact info</h1>
+				<h1>Contact info</h1>
 				<div className='imgContainer margins'>
 					<img
 						className='veteran64'
@@ -52,11 +44,40 @@ const Contact = () => {
 					/>
 				</div>
 				<form className='sideContainer margins' onSubmit={handleSubmit}>
-                    <p className="margins">To contact us submit form and we will respond as fast as possible</p>
-					<input className="margins" type='email' onChange={handleInputChange} name="emailH" value={contactEmail} placeholder='enter e-mail' required/>
-					<input className="margins" type='text' onChange={handleInputChange} name="textH" value={contactName} placeholder='enter name' required/>
-					<textarea className="margins" onChange={handleInputChange} name="textareaH" value={contactContent} cols={30} rows={10} placeholder="enter text to send" required></textarea>
-					<button className="margins" type="submit">Submit</button>
+					<p className='margins'>
+						To contact us submit form and we will respond as fast as possible
+					</p>
+					<input
+						className='margins'
+						type='email'
+						onChange={handleInputChange}
+						name='emailH'
+						value={contactEmail}
+						placeholder='enter e-mail'
+						required
+					/>
+					<input
+						className='margins'
+						type='text'
+						onChange={handleInputChange}
+						name='textH'
+						value={contactName}
+						placeholder='enter name'
+						required
+					/>
+					<textarea
+						className='margins'
+						onChange={handleInputChange}
+						name='textareaH'
+						value={contactContent}
+						cols={30}
+						rows={10}
+						placeholder='enter text to send'
+						required
+					></textarea>
+					<button className='margins' type='submit'>
+						Submit
+					</button>
 				</form>
 			</div>
 			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'>

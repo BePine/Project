@@ -9,18 +9,25 @@ const About = () => {
 				></path>
 			</svg>
 			<div className='sideSite'>
-                <h1>About us</h1>
-                <div className='imgContainer margins'>
-                    <img
-                        className='veteran64'
-                        src={require('../../static/veteran64.png')}
-                        alt='couldn t load img'
-                    />
-                </div>
+				<h1>About us</h1>
+				<div className='imgContainer margins'>
+					<img
+						className='veteran64'
+						src={require('../../static/veteran64.png')}
+						alt='couldn t load img'
+					/>
+				</div>
 				<div className='sideContainer margins'>
-                    <p className="margins">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-
+					<p className='margins'>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+						aliquip ex ea commodo consequat. Duis aute irure dolor in
+						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+						culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
 			</div>
 			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'>
 				<path fill='#f05454' d='M0,224L1440,96L1440,0L0,0Z'></path>

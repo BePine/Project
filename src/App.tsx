@@ -17,15 +17,15 @@ function App() {
 
 		// setArticle(getArticles())
 	}, []);
-	const location = useLocation()
-	console.log(location.pathname)
+	const location = useLocation();
+	console.log(location.pathname);
 	return (
-		<ParallaxProvider>			
+		<ParallaxProvider>
 			<div className='App'>
 				<Header />
-				<Cookies/>	
-				<Outlet context={{article}}/>
-				<JumpArrow/>
+				<Cookies />
+				<Outlet context={{ article }} />
+				<JumpArrow />
 				<Footer />
 			</div>
 		</ParallaxProvider>
@@ -33,5 +33,5 @@ function App() {
 }
 export function useArticle() {
 	return useOutletContext<any>();
-  }
+}
 export default App;

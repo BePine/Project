@@ -13,24 +13,31 @@ import Contact from './Pages/Contact/Contact';
 import About from './Pages/About/About';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+	document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-				<Routes>
-          <Route path='/' element={<App/>}>
-            <Route path='/' element={<><Main /></>}></Route>
-            <Route path='forum' element={<Forum/>}></Route>
-            <Route path='forum/posts/*' element={<Post/>}></Route>
-            <Route path='recArticles/*' element={<Post/>}></Route>
-            <Route path='contact' element={<Contact/>}></Route>
-            <Route path='about' element={<About/>}></Route>
-            <Route path='*' element={<Error404/>}></Route>
-          </Route>
-				</Routes>
-			</BrowserRouter>
-  </React.StrictMode>
+	<React.StrictMode>
+		<BrowserRouter>
+			<Routes>
+				<Route path='/' element={<App />}>
+					<Route
+						path='/'
+						element={
+							<>
+								<Main />
+							</>
+						}
+					></Route>
+					<Route path='forum' element={<Forum />}></Route>
+					<Route path='forum/posts/*' element={<Post />}></Route>
+					<Route path='recArticles/*' element={<Post />}></Route>
+					<Route path='contact' element={<Contact />}></Route>
+					<Route path='about' element={<About />}></Route>
+					<Route path='*' element={<Error404 />}></Route>
+				</Route>
+			</Routes>
+		</BrowserRouter>
+	</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

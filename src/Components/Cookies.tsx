@@ -22,7 +22,9 @@ const Cookies = () => {
 		<div className='cookie margins' style={cookieShow}>
             <h2>Notice</h2>
 			<div className='contentCookie'>We collect cookies to analyze our website traffic and performance; we never collect any personal data, disclaimer: this website doesn t actual collect any cookies.</div>
-            <button onClick={handleClickConsent}>Consent</button><button onClick={handleClickDeny}>Deny</button>
+            <img className="margins" src={require("../static/cookie.png")} alt="couldn t load image" />
+            <button onClick={handleClickConsent}>Consent</button>
+            <button onClick={handleClickDeny}>Deny</button>
 		</div>
 	);
 };
