@@ -328,7 +328,8 @@ svg {
 }
 .main .newsletter form button,
 .cookie button,
-.sideContainer button {
+.sideContainer button,
+.forum .forumHeader .createPost {
 	width: 90%;
 	height: 2em;
 	background: #f05454;
@@ -340,12 +341,13 @@ svg {
 	margin-bottom: 2%;
 }
 .main .newsletter form button:hover,
-.cookie button:hover {
+.cookie button:hover,
+.forum .forumHeader button:hover {
 	transform: scale(110%);
 }
 /* --FORUM-- */
 .forum {
-	min-height: 100px;
+	min-height: 00px;
 	position: relative;
 }
 .forum .forumHeader {
@@ -356,7 +358,8 @@ svg {
 	font-size: 1.2em;
 	text-align: center;
 	line-height: 6em;
-	z-index: 9;
+	z-index: 7;
+	position:relative;
 }
 .forum .forumHeader h2 {
 	background: #131513;
@@ -364,6 +367,15 @@ svg {
 	height: 4em;
 	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.35);
 	z-index: 9;
+	
+}
+.forum .forumHeader .createPost{
+	margin-top:0.9em;
+	width:8%;
+	height:4em;
+	position:absolute;
+	top:0;
+	right:1%;
 }
 .forum .posts {
 	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.35);

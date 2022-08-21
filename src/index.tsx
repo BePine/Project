@@ -11,6 +11,7 @@ import Post from './Pages/Forum/Post';
 import RecArticles from './Pages/RecArticles/RecArticles';
 import Contact from './Pages/Contact/Contact';
 import About from './Pages/About/About';
+import NewPost from './Pages/NewPost/NewPost';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -30,6 +31,7 @@ root.render(
 					></Route>
 					<Route path='forum' element={<Forum />}></Route>
 					<Route path='forum/posts/*' element={<Post />}></Route>
+					<Route path='forum/createPost' element={<NewPost />}></Route>
 					<Route path='recArticles/*' element={<Post />}></Route>
 					<Route path='contact' element={<Contact />}></Route>
 					<Route path='about' element={<About />}></Route>

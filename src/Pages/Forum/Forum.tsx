@@ -13,7 +13,10 @@ const Forum = () => {
 
 	return (
 		<div className='forum'>
-            <div className="forumHeader margins"><h2>Forum</h2></div>
+			<div className='forumHeader margins'>
+				<h2>Forum</h2>
+				<Link to="/forum/createPost"><div className='createPost'>new post</div></Link>
+			</div>
 			{posts?.map((pos: any) => (
 				<Link to={'/forum/posts/' + pos.id} state={pos}>
 					<div className='posts margins'>
