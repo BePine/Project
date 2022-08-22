@@ -1,33 +1,35 @@
 import { addDoc } from "firebase/firestore";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { postsColRef } from "../../lib/firebase";
 
 const NewPost = () => {
-    const [newPostEmail, setNewPostEmail] = useState('');
-	const [newPostName, setNewPostName] = useState('');
+    const [newPostTitle, setNewPostTitle] = useState('');
+	const [newPostAuthor, setNewPostAuthor] = useState('');
 	const [newPostContent, setNewPostContent] = useState('');
-
+	const navigate = useNavigate()
 	const handleInputChange = (e: any) => {
 		if (e.target.name === 'textareaH') {
-			console.log(newPostName);
+			console.log(newPostAuthor);
 			setNewPostContent(e.target.value);
-		} else if (e.target.name === 'textH') {
-			console.log(newPostName);
-			setNewPostName(e.target.value);
-		} else if (e.target.name === 'emailH') {
-			setNewPostEmail(e.target.value);
+		} else if (e.target.name === 'nameH') {
+			console.log(newPostAuthor);
+			setNewPostAuthor(e.target.value);
+		} else if (e.target.name === 'titleH') {
+			setNewPostTitle(e.target.value);
 		}
 	};
 	const handleSubmit = (e: any) => {
 		e.preventDefault();
 		const docRef = addDoc(postsColRef, {
-			email: newPostEmail,
-			name: newPostName,
+			title: newPostTitle,
+			author: newPostAuthor,
 			content: newPostContent,
 		});
-		setNewPostName('');
-		setNewPostEmail('');
+		setNewPostAuthor('');
+		setNewPostTitle('');
 		setNewPostContent('');
+		navigate('/forum')
 	};
     return(
         <>
@@ -35,7 +37,7 @@ const NewPost = () => {
 				<path fill='#f05454' d='M0,32L1440,256L1440,320L0,320Z'></path>
 			</svg>
 			<div className='sideSite'>
-				<h1>Contact info</h1>
+				<h1>Create new post</h1>
 				<div className='imgContainer margins'>
 					<img
 						className='veteran64'
@@ -45,24 +47,24 @@ const NewPost = () => {
 				</div>
 				<form className='sideContainer margins' onSubmit={handleSubmit}>
 					<p className='margins'>
-						To contact us submit form and we will respond as fast as possible
+						Fill fields with correct data to create your post.
 					</p>
 					<input
 						className='margins'
-						type='email'
+						type='text'
 						onChange={handleInputChange}
-						name='emailH'
-						value={newPostEmail}
-						placeholder='enter e-mail'
+						name='titleH'
+						value={newPostTitle}
+						placeholder='enter title'
 						required
 					/>
 					<input
 						className='margins'
 						type='text'
 						onChange={handleInputChange}
-						name='textH'
-						value={newPostName}
-						placeholder='enter name'
+						name='nameH'
+						value={newPostAuthor}
+						placeholder='enter author'
 						required
 					/>
 					<textarea
@@ -72,7 +74,7 @@ const NewPost = () => {
 						value={newPostContent}
 						cols={30}
 						rows={10}
-						placeholder='enter text to send'
+						placeholder='enter text for post to contain'
 						required
 					></textarea>
 					<button className='margins' type='submit'>

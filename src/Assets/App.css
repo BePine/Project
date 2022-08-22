@@ -342,7 +342,7 @@ svg {
 }
 .main .newsletter form button:hover,
 .cookie button:hover,
-.forum .forumHeader button:hover {
+.forum .forumHeader a .createPost:hover {
 	transform: scale(110%);
 }
 /* --FORUM-- */
@@ -369,13 +369,16 @@ svg {
 	z-index: 9;
 	
 }
-.forum .forumHeader .createPost{
+
+.forum .forumHeader a .createPost{
+	width:auto;
 	margin-top:0.9em;
-	width:8%;
+	min-width:8%;
 	height:4em;
 	position:absolute;
 	top:0;
 	right:1%;
+	line-height:4em;
 }
 .forum .posts {
 	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.35);
